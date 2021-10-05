@@ -32,15 +32,16 @@ namespace Calculos_Basicos
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtNume1 = new System.Windows.Forms.TextBox();
+            this.txtNume2 = new System.Windows.Forms.TextBox();
             this.btnSomar = new System.Windows.Forms.Button();
             this.btnSubtrair = new System.Windows.Forms.Button();
             this.btnMultiplicar = new System.Windows.Forms.Button();
             this.btnDividir = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtResultado = new System.Windows.Forms.TextBox();
             this.btnLimpar = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnSair = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -75,23 +76,23 @@ namespace Calculos_Basicos
             this.label3.TabIndex = 2;
             this.label3.Text = "DIGITE O 2º NÚMERO:";
             // 
-            // textBox1
+            // txtNume1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.ForeColor = System.Drawing.Color.DarkRed;
-            this.textBox1.Location = new System.Drawing.Point(270, 100);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(216, 26);
-            this.textBox1.TabIndex = 3;
+            this.txtNume1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtNume1.ForeColor = System.Drawing.Color.DarkRed;
+            this.txtNume1.Location = new System.Drawing.Point(270, 100);
+            this.txtNume1.Name = "txtNume1";
+            this.txtNume1.Size = new System.Drawing.Size(216, 26);
+            this.txtNume1.TabIndex = 3;
             // 
-            // textBox2
+            // txtNume2
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.ForeColor = System.Drawing.Color.DarkRed;
-            this.textBox2.Location = new System.Drawing.Point(270, 146);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(216, 26);
-            this.textBox2.TabIndex = 4;
+            this.txtNume2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtNume2.ForeColor = System.Drawing.Color.DarkRed;
+            this.txtNume2.Location = new System.Drawing.Point(270, 146);
+            this.txtNume2.Name = "txtNume2";
+            this.txtNume2.Size = new System.Drawing.Size(216, 26);
+            this.txtNume2.TabIndex = 4;
             // 
             // btnSomar
             // 
@@ -101,12 +102,13 @@ namespace Calculos_Basicos
             this.btnSomar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btnSomar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSomar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSomar.Location = new System.Drawing.Point(197, 187);
+            this.btnSomar.Location = new System.Drawing.Point(127, 187);
             this.btnSomar.Name = "btnSomar";
-            this.btnSomar.Size = new System.Drawing.Size(87, 39);
+            this.btnSomar.Size = new System.Drawing.Size(38, 25);
             this.btnSomar.TabIndex = 5;
             this.btnSomar.Text = "+";
             this.btnSomar.UseVisualStyleBackColor = false;
+            this.btnSomar.Click += new System.EventHandler(this.btnSomar_Click);
             // 
             // btnSubtrair
             // 
@@ -116,12 +118,13 @@ namespace Calculos_Basicos
             this.btnSubtrair.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btnSubtrair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubtrair.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSubtrair.Location = new System.Drawing.Point(290, 187);
+            this.btnSubtrair.Location = new System.Drawing.Point(173, 187);
             this.btnSubtrair.Name = "btnSubtrair";
-            this.btnSubtrair.Size = new System.Drawing.Size(87, 39);
+            this.btnSubtrair.Size = new System.Drawing.Size(37, 25);
             this.btnSubtrair.TabIndex = 6;
             this.btnSubtrair.Text = "-";
             this.btnSubtrair.UseVisualStyleBackColor = false;
+            this.btnSubtrair.Click += new System.EventHandler(this.btnSubtrair_Click);
             // 
             // btnMultiplicar
             // 
@@ -131,12 +134,13 @@ namespace Calculos_Basicos
             this.btnMultiplicar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btnMultiplicar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMultiplicar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnMultiplicar.Location = new System.Drawing.Point(197, 243);
+            this.btnMultiplicar.Location = new System.Drawing.Point(216, 187);
             this.btnMultiplicar.Name = "btnMultiplicar";
-            this.btnMultiplicar.Size = new System.Drawing.Size(87, 39);
+            this.btnMultiplicar.Size = new System.Drawing.Size(38, 25);
             this.btnMultiplicar.TabIndex = 7;
             this.btnMultiplicar.Text = "*";
             this.btnMultiplicar.UseVisualStyleBackColor = false;
+            this.btnMultiplicar.Click += new System.EventHandler(this.btnMultiplicar_Click);
             // 
             // btnDividir
             // 
@@ -146,33 +150,22 @@ namespace Calculos_Basicos
             this.btnDividir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btnDividir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDividir.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnDividir.Location = new System.Drawing.Point(290, 243);
+            this.btnDividir.Location = new System.Drawing.Point(260, 187);
             this.btnDividir.Name = "btnDividir";
-            this.btnDividir.Size = new System.Drawing.Size(87, 39);
+            this.btnDividir.Size = new System.Drawing.Size(34, 25);
             this.btnDividir.TabIndex = 8;
             this.btnDividir.Text = "/";
             this.btnDividir.UseVisualStyleBackColor = false;
+            this.btnDividir.Click += new System.EventHandler(this.btnDividir_Click);
             // 
-            // button5
+            // txtResultado
             // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button5.Location = new System.Drawing.Point(123, 288);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(87, 39);
-            this.button5.TabIndex = 9;
-            this.button5.Text = "Resultado";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox3.ForeColor = System.Drawing.Color.DarkRed;
-            this.textBox3.Location = new System.Drawing.Point(216, 297);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(192, 26);
-            this.textBox3.TabIndex = 10;
+            this.txtResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtResultado.ForeColor = System.Drawing.Color.DarkRed;
+            this.txtResultado.Location = new System.Drawing.Point(216, 234);
+            this.txtResultado.Name = "txtResultado";
+            this.txtResultado.Size = new System.Drawing.Size(192, 26);
+            this.txtResultado.TabIndex = 10;
             // 
             // btnLimpar
             // 
@@ -182,7 +175,7 @@ namespace Calculos_Basicos
             this.btnLimpar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnLimpar.Location = new System.Drawing.Point(422, 187);
+            this.btnLimpar.Location = new System.Drawing.Point(167, 276);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(87, 39);
             this.btnLimpar.TabIndex = 11;
@@ -190,21 +183,48 @@ namespace Calculos_Basicos
             this.btnLimpar.UseVisualStyleBackColor = false;
             this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(118, 238);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(92, 18);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Resultado";
+            // 
+            // btnSair
+            // 
+            this.btnSair.BackColor = System.Drawing.Color.Lime;
+            this.btnSair.FlatAppearance.BorderSize = 0;
+            this.btnSair.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Cyan;
+            this.btnSair.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSair.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSair.Location = new System.Drawing.Point(293, 276);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(87, 39);
+            this.btnSair.TabIndex = 13;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = false;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Calculos_Basicos.Properties.Resources._0;
             this.ClientSize = new System.Drawing.Size(563, 361);
+            this.Controls.Add(this.btnSair);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnLimpar);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.txtResultado);
             this.Controls.Add(this.btnDividir);
             this.Controls.Add(this.btnMultiplicar);
             this.Controls.Add(this.btnSubtrair);
             this.Controls.Add(this.btnSomar);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNume2);
+            this.Controls.Add(this.txtNume1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -220,15 +240,16 @@ namespace Calculos_Basicos
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtNume1;
+        private System.Windows.Forms.TextBox txtNume2;
         private System.Windows.Forms.Button btnSomar;
         private System.Windows.Forms.Button btnSubtrair;
         private System.Windows.Forms.Button btnMultiplicar;
         private System.Windows.Forms.Button btnDividir;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtResultado;
         private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnSair;
     }
 }
 
