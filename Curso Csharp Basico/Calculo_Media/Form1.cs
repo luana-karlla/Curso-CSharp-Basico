@@ -37,7 +37,7 @@ namespace Calculo_Media
             n1 = Convert.ToDouble(textnota1.Text);
             n2 = Convert.ToDouble(textNota2.Text);
             n3 = Convert.ToDouble(textNota3.Text);
-            media = (n1 + n2 + n3) / 3;
+            media = (n1*5 + n2*3 + n3*2) / 10;
             textMedia.Text = media.ToString();
 
         }
