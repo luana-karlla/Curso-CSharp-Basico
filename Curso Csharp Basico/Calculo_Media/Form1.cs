@@ -40,6 +40,19 @@ namespace Calculo_Media
             media = (n1*5 + n2*3 + n3*2) / 10;
             textMedia.Text = media.ToString();
 
+            if(media >= 7)
+            {
+                MessageBox.Show("Aluno Aprovado!");
+            }
+            else if(media < 5)
+            {
+                MessageBox.Show("Aluno Reprovado!");
+            }
+            else 
+            {
+                MessageBox.Show("Aluno em Recuperação!");
+            }
+
         }
     }
 }
