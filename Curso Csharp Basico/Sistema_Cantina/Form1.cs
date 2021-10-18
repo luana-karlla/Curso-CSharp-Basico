@@ -45,8 +45,8 @@ namespace Sistema_Cantina
                 {
                     listCaixa.Items.Add(txtCodigo.Text + "---" + produtos[indice] + "--R$" + valor[indice]);
                     soma = soma+valor[indice];
-                    label1.Text = ("Valor total R$ " + soma);
-                    picImagem.ImageLocation = "D:/MeusProjetos/Curso CSharp Básico-Fundação Bradesco/Curso-CSharp-Basico/Curso Csharp Basico/Sistema_Cantina/Imagem" + codigo[indice] + ".jpeg";
+                    label3.Text = ("Valor total R$ " + soma);
+                    picImagem.ImageLocation = "D:/MeusProjetos/Curso CSharp Básico-Fundação Bradesco/Curso - CSharp - Basico/Curso Csharp Basico/Sistema_Cantina/Imagem" + codigo[indice] + ".jpg";
                     txtCodigo.Text = "";
                     txtCodigo.Focus(); 
                 }
